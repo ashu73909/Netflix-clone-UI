@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #020617;
+    color: whitesmoke;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+#uni-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: min(100%, 480px);
+    max-height: 800px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    padding: 32px;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+#login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+#login-box h1{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: 0.05em;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+#form input{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #f8f9fb;
+    font-size: 1rem;
+}
+#form input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+#rem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.remember-row{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#rem label{
+    cursor: pointer;
+}
+#rem a{
+    color: #f8f9fb;
+    text-decoration: none;
+    margin-left: auto;
+    white-space: nowrap;
+}
+#btn-cont{
+    width: 100%;
+    margin-top: 8px;
+}
+#btn{
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #E50914, #c63c3ce9);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    margin-bottom: 20px;
+}
+#btn:hover{
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+#uni-cont > div:last-child a{
+    color: #dbe7ff;
+    text-decoration: none;
+}
+#uni-cont > div:last-child a strong{
+    color: #fff;
+}
+
+#dropdown{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #f8f9fb;
+    font-size: 1rem;
+}
+#dropdown option{
+    color: #020617;
+}
+#pass{
+    display: flex;
+    flex-direction: row;
+}
+/* ---------------------------register cont----------------------------------------------- */
+#reg-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+#reg-box h1{
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: 0.05em;
+}
+/* --------------------------------profile cont------------------------------------------ */
+#user{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #f8f9fb;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+}
+#head-cont-prof{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+/* -------------------------------------js styles ------------------------------------- */
+.green{
+    display: flex;
+    align-items: center;
+    color:green;
+    max-width: auto;
+    max-height:50px;
+}
+.red{
+    display: flex;
+    align-items: center;
+    color:red;
+    max-width: auto;
+    max-height:50px;
+}
+
+.text{
+    opacity: 0.7;
+    font-size: small;
+    color:wheat;
+}
+/* -----------------------------------password box image --------------------------------------- */
+.pass-box{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.pass-box img{
+    position: absolute;
+    right:15px;
+    z-index: 5;
+    cursor: pointer;
+}
+/* ----------------------------------Loading modal---------------------------------------- */
+.overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    position: fixed;
+    z-index:1000;
+    background-color: #0206172b;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: linear-gradient(to right, rgba(32, 32, 71, 0.633),rgba(38, 144, 144, 0.584));
+    color: white;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+}
+.hidden{
+    display: none;
+}

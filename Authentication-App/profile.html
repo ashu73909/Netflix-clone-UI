@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hidden" id="loading">
+        <div class="overlay">
+            <div class="load">Loading</div>
+        </div>
+    </div>
+    <h1>Profile</h1>
+    <div id="msgcont"></div>
+    <div id="uni-cont">
+
+        <div id="head-cont-prof">
+            User Dashboard
+            <button id="btn" class="LO-btn" style="width: 100px;background: rgba(250, 0, 0, 0.595); padding: 10px 10px; font-size:small ;">Log Out</button>
+        </div>
+
+        <div id="user">
+            <img src="assets/user.png" style="height: 25px;">
+            <div id="username" class="items">
+                Username
+                <!-- ------------------------------------JS logic----------------------------------- -->
+            </div>
+        </div>
+
+        <div id="user" >
+            <img src="assets/mail.png" style="height: 25px;">
+            <div id="email" class="items">
+                Email
+                <!-- -------------------------JS logic---------------------------------------------- -->
+            </div>
+        </div>
+
+        <div id="user">
+            <img src="assets/role.png" style="height: 25px;">
+            <div id="role" class="items">
+                <img src="" alt="">
+                Role
+                <!-- ----------------------------JS logic ------------------------------------------- -->
+            </div>
+        </div>
+
+        <div id="user">
+            <img src="assets/calendar.png" style="height: 25px;">
+            <div id="joined" class="items">
+                Member Since
+                <!-- -------------------------JS logic---------------------------------------------- -->
+            </div>
+        </div>
+        <br>
+        <hr style="width: 100%; margin: auto; border: 1px solid #000;">
+        <br>
+        Ready to Explore
+        <button id="btn" style="margin-top: 10px;" class="movie-site">
+            <img src="assets/external-link.png" style="height: 15px;">
+            movie.site
+        </button>
+
+    </div>
+    <script type="module" src="./app/profile.js"></script>
+    <script src="app/toNetflix.js"></script>
+</body>
+</html>

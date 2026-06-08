@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-clone</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons (eye icon for password toggle) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="netflix.css">
+
+</head>
+<body>
+    <section class="hero-banner">
+        <header>
+            <nav>
+                <div class="NavBar-cont">
+                    <div>
+                        <img src="assets/ntflx-Logo1.webp" alt="" style="max-width: 150px;">
+                    </div>
+                    <div class="Lang-Btn-cont">
+                        <div class="lang-box">
+                            <i class="fa-solid fa-language"></i>
+                            <select name="languages" id="Language-selecter">
+                                <!-- Common Global Languages -->
+                                <option value="en-US" selected>English</option>
+                                <option value="es-ES">Español</option>
+                                <option value="fr-FR">Français</option>
+                                <option value="de-DE">Deutsch</option>
+                                <option value="it-IT">Italiano</option>
+                                <option value="pt-BR">Português</option>
+    
+                                <!-- Asian Languages -->
+                                <option value="hi-IN">हिन्दी (Hindi)</option>
+                                <option value="zh-CN">中文 (Mandarin)</option> 
+                                <option value="ja-JP">日本語 (Japanese)</option>
+                                <option value="ko-KR">한국어 (Korean)</option>
+    
+                                <!-- Middle Eastern / Others -->
+                                <option value="ar-SA">العربية (Arabic)</option>
+                                <option value="ru-RU">Русский (Russian)</option>
+                                <option value="tr-TR">Türkçe (Turkish)</option>
+                                <option value="vi-VN">Tiếng Việt (Vietnamese)</option>
+                            </select>
+                        </div>
+                        <button id="sign-out" class="sgn-Btn">Sign Out</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="hero">
+            <div class="hero-top">
+                <div class="hero-content">
+                    <h1 style="font-weight: 700;margin-bottom: 20px;line-height:none;text-align: center;">Unlimited movies,<br>shows, and more</h1>
+                    <h3 style="font-size: 20px;font-weight:400px ;">Starts at ₹149. Cancel at any time.</h3>
+                    <button class="hero-CTA">Restart Your Membership ></button>
+                    <!-- <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: none;margin-top: 5px;">click to vist latte.com</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="trending">
+            <div class="trending-movie">
+                <div class="trending-header">
+
+                    <h1 style="font-size:30px;font-weight: bolder;">Trending Now</h1>
+
+                </div>
+
+                <div class="movie-slider">
+
+                    <div class="movie-cards">
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">1</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name">dhurandar</span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">2</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">3</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">4</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">5</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">6</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">7</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">8</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">9</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                        <article class="uni-cards">
+                            <button class="movie-btn">
+                                <span class="rank">10</span>
+                                <span class="poster">
+                                    <img src="assets/hero-background.webp" alt="1stimg" style="height:260px; width:180px;">
+                                </span>
+                                <span class="name"></span>
+                            </button>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="">
+                <h1 style="font-size:30px;font-weight: bolder;">More reasons to join</h1>
+            </div>
+            <div class="feature-cont">
+                <div class="f-card">
+                    <h1 style="font-size: x-large; font-weight:700 ;">Enjoy on your TV</h1>
+                    <p style="opacity: 0.6;">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                    <img src="assets/statisctics.png" alt="">
+                </div>
+                <div class="f-card">
+                    <h1 style="font-size: x-large; font-weight:700 ;">Download your shows to watch offline</h1>
+                    <p style="opacity: 0.6;">Save your favourites easily and always have something to watch.</p>
+                    <img src="assets/down-arrow.png" alt="">
+                </div>
+                <div class="f-card">
+                    <h1 style="font-size: x-large; font-weight:700 ;">Watch everywhere</h1>
+                    <p style="opacity: 0.6;">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                    <img src="assets/telescope.png" alt="">
+                </div>
+                <div class="f-card">
+                    <h1 style="font-size: x-large; font-weight:700 ;">Create profiles for kids</h1>
+                    <p style="opacity: 0.6;">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                    <img src="assets/speech-bubble.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="FAQs">
+            <div class="">
+                <h1 style="font-size:30px;font-weight: bolder;">Frequently Asked Questions</h1>
+            </div>
+            <div class="accordion">
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        what is Netflix?
+                        <span class="opr" style="font-size: 40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.<br>
+                        You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!    
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        How much does Netflix cost?
+                        <span class="opr" style="font-size: 40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649/month.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        where can I watch?
+                        <span class="opr" style="font-size: 40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<br>
+                        You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        How do I cancel?
+                        <span class="opr" style="font-size: 40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        What can I watch on Netflix?
+                        <span class="opr" style="font-size: 40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        Netflix has an extensive library of feature films, documentaries, shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faqs">
+                        Is Netflix good for kids?
+                        <span class="opr" style="font-size:40px;">+</span>
+                    </button>
+                    <div class="faqs-answer">
+                        The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.<br>
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="portfolio-btn">
+            <button class="prtf-btn">check out portfolio &#x2192</button>
+        </section>
+
+        <footer>
+            <section class="footer-section">
+                <p style="opacity: 0.7;">Questions?Call<a href="#" style="text-decoration: underline;">000-800-919-1743</a></p>
+                <div class="footerLinks">
+                    <div class="f-link">
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Speed Test</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-link">
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Cookie Preferences</a></li>
+                            <li><a href="#">Legal Notices</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-link">
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Ways to Watch</a></li>
+                            <li><a href="#">Corporate Information</a></li>
+                            <li><a href="#">Only on Netflix</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-link">
+                        <ul>
+                            <li><a href="#">Media Centre</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Lang-Btn-cont">
+                    <div class="lang-box">
+                        <i class="fa-solid fa-language"></i>
+                        <select name="languages" id="Language-selecter">
+                            <!-- Common Global Languages -->
+                            <option value="en-US" selected>English</option>
+                            <option value="es-ES">Español</option>
+                            <option value="fr-FR">Français</option>
+                            <option value="de-DE">Deutsch</option>
+                            <option value="it-IT">Italiano</option>
+                            <option value="pt-BR">Português</option>
+    
+                            <!-- Asian Languages -->
+                            <option value="hi-IN">हिन्दी (Hindi)</option>
+                            <option value="zh-CN">中文 (Mandarin)</option> 
+                            <option value="ja-JP">日本語 (Japanese)</option>
+                            <option value="ko-KR">한국어 (Korean)</option>
+    
+                            <!-- Middle Eastern / Others -->
+                            <option value="ar-SA">العربية (Arabic)</option>
+                            <option value="ru-RU">Русский (Russian)</option>
+                            <option value="tr-TR">Türkçe (Turkish)</option>
+                            <option value="vi-VN">Tiếng Việt (Vietnamese)</option>
+                        </select>
+                    </div>
+                </div>
+                <p style="opacity: 0.7;">Netflix India</p>
+            </section>
+        </footer>
+    </main>
+
+    <script src="app/modal.js"></script>
+    <script src="app/auth.js"></script>
+    <script src="app/accordion.js"></script>
+</body>
+</html>

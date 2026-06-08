@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content:center ;
+            align-items: center;
+            gap:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hidden" id="loading">
+        <div class="overlay">
+            <div class="load">Loading</div>
+        </div>
+    </div>
+    <div id="message-box"></div>
+    <div class="reg-cont" id="uni-cont">
+        <div id="reg-box">
+            <h1>Register</h1>
+            <div id="form">
+                *Name
+                <input  id="user-name" type="text" placeholder="Enter name">
+                *Email
+                <input id="email-id" type="text" placeholder="Enter mail">
+                <div id="pass">*Password <p style="opacity: 0.7;">(At least 6 characters)</p></div>
+                <div class="pass-box"><input id="user-pass" type="password"  placeholder="Create a strong password" class="p"><img src="assets/hide.png" style="height: 25px;" alt="hide" class="eye"></div>
+                *Confirm Password
+                <div class="pass-box"><input id="re-pass" type="password" placeholder="Re-enter Password" class="p"><img src="assets/hide.png" style="height: 25px;" alt="hide" class="eye"></div>
+                *Role
+                <select name="role" id="dropdown">
+                    <option value="USER">User</option>
+                    <option value="ADMIN">Admin</option>
+                </select>
+            </div>    
+            <div id="btn-cont">
+                <button id="btn" type="submit">
+                    Register
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./app/register.js"></script>
+    <script src="./app/hide-password.js"></script>
+</body>
+</html>

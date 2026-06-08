@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hidden" id="loading">
+        <div class="overlay">
+            <div class="load">Loading</div>
+        </div>
+    </div>
+    <h1>Login Page</h1>
+    <div id="uni-cont">
+        <div id="login-box">
+            <div id="msgcont"></div>
+            <h1>Login</h1>
+            <div id="form">
+                <input id="user-inp" type="text" placeholder="Username">
+                <input id="user-pas" type="text" placeholder="Password">
+            </div>
+            <div id="rem">
+                <div class="remember-row">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+        <div id="btn-cont">
+            <button id="btn" type="submit">Login</button>
+        </div>
+        <div>
+            <a href="register.html">Don't have an account?<strong>Register</strong></a>
+        </div>
+    </div>
+    <script src="./app/login.js"></script>
+</body>
+</html>

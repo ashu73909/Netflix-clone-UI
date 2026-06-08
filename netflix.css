@@ -1,0 +1,491 @@
+/* ------------------------------------root-items-------------------------------------- */
+:root{
+    --text-color:#F7F7F4;
+    --accent-color:rgb(21, 17, 1);
+    --accent-hover-color:rgb(146, 229, 146);
+    --container-width: 75%;
+    --container-max-width: 1400px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top:none ;
+    background-color:black;
+    color: var(--text-color);
+}
+/* --------------------------------------wrapper container----------------------------------------- */
+/* ---------------------------------hero-banner-Netflix-bg-image------------------------------------------- */
+.hero-banner{
+    width: 100%;
+    margin:auto;
+    max-width: 1700px;
+    /* min-width: 900px; */
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.72)
+        ),
+        url("assets/hero-bg2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: saturate(1.05);
+    box-shadow:
+        inset 0 -60px 80px rgba(0,0,0,.55),
+        inset 0 40px 80px rgba(0,0,0,.35),
+        inset 40px 0 80px rgba(0,0,0,.45),
+        inset -40px 0 80px rgba(0,0,0,.45);
+    
+}
+.hero-banner::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 45%,
+            rgba(0,0,0,0.35) 75%,
+            rgba(0,0,0,0.65) 100%
+        );
+
+    pointer-events: none;
+}
+/*We added NavBar-cont and .hero in relative and z-index:2 => so that both container should come out of wrapper class and no style effect on wrapper class affects their elements */
+.NavBar-cont,
+.hero{
+    position: relative;
+    z-index: 2;
+}
+/* ---------------------------------navigation Bar ----------------------------------------- */
+nav{
+    padding-top: 20px;
+}
+.NavBar-cont{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin:5px auto;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*select and button => container*/
+.Lang-Btn-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+/*Select*/
+select {
+    border: 1px solid rgba(255, 255, 255, 0.2);/* Soft white border looks more like real glass */
+    border-radius: 5px;
+    /* border: 1px solid rgba(255,255,255,0.35); */
+    height: 38px;
+    width: 190px;
+    font-size: medium;
+    font-weight: bold;
+    
+    /* Changed from 0.5 to 0.15 for better transparency */
+    background-color: rgba(69, 69, 69, 0.15);
+    
+    color: #fff;
+    backdrop-filter: blur(7px);
+    /*vendor-prefixed version of the backdrop-filter=>to ensure the effect works in browsers like Safari and older versions of Chrome*/
+    -webkit-backdrop-filter: blur(8px);
+    appearance: none;
+    padding: 0 10px;
+    outline: none;
+}
+select option {
+    background: #fff;
+    color: #454545;
+}
+/*selct class =>  lang-box */
+.lang-box {
+    position: relative;
+    display: inline-block;
+}
+
+/* Language Icon (Globe/A) */
+.lang-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff; /* Changed to white to match glassy theme */
+    z-index: 10; /* Lifts it above the select element */
+    pointer-events: none; /* Allows clicking through to the select */
+}
+.lang-box select {
+    padding: 0 30px 0 35px; /* extra left space + right padding for arrow */
+    cursor: pointer;
+}
+/* Custom Down Arrow Icon */
+/*
+.lang-box .arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #fff; /* Changed to white to match glassy theme */
+    /*font-size: 0.9rem;
+    z-index: 10; /* Lifts it above the select element *//*
+}
+*/
+
+/*Nav bar button */
+.sgn-Btn{ 
+    background-color: #E50914!important;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 38px;
+    padding: 0 20px;
+    font-size:small;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ------------------------------------hero section -------------------------------------- */
+/* -----------------------------wrapped in .hero-banner section--------------------------- */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-top{
+    width: var(--container-width);
+    margin: 5px auto;
+    max-width: var(--container-max-width);
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    height: 700px;
+    padding-bottom: 150px;
+}
+.hero-top >:first-child h1{
+    font-size: 50px;
+    margin-bottom: none;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*hero-CTA*/
+.hero-CTA{
+    background-color: #E50914;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    height: 38px;
+    padding: 25px 30px;
+    margin-top: 30px;
+    font-size:large;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------------------Trending-section ----------------------------------------- */
+/*Using=> main properties same as .hero-banner to achieve visual consistency first architecture refinement later*/
+main{
+    width: 100%;
+    margin:auto;
+    max-width: 1700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+}
+.trending{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 5px auto;
+    /* margin-bottom: 40px; */
+}
+
+
+.movie-slider{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width:none;
+    margin: 20px;
+    padding: 10px;
+}
+.movie-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:25px;
+}
+
+.uni-cards{
+    padding:auto;
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    overflow: visible;/*overflow:hidden; => anything that does over the card gets clipped*/
+    flex-shrink: 0;/*Use it on elements that must never deform or squish, such as logos, icons, avatars, or fixed-width sidebars.*/
+    transition: transform .25s ease;
+    /**/
+    position: relative;
+}
+.uni-cards:hover{
+    transform: scale(1.075);
+    cursor: pointer;
+}
+/*spans*/
+.poster{
+    position: relative;
+    z-index: 1;
+}
+.poster img{
+    display:block;/* Turns the image from an inline element into a block element, removing weird gaps and allowing it to respect its set width and height.*/
+    width:180px;/*uni-card width and height*/
+    height:260px;
+    object-fit:cover;/* tells the browser to scale the image to completely fill the 180x260 box */
+}
+.rank{
+    position: absolute;
+    left: -15px;
+    bottom: 0;
+    font-size: 6rem;
+    z-index: 3;
+    font-weight:650;
+    color: white;
+}
+.name{
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+    left: 50px;
+    font-size:x-large;
+    font-weight: bolder;
+    color:white;
+}
+
+/* ----------------------------------features---------------------------------------- */
+.features{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 5px auto;
+    /*border:2px solid yellow ;*/
+    /* margin-bottom: 40px; */
+}
+.feature-cont{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:16px;
+}
+.f-card{
+    display: flex;
+    flex-direction: column;
+    justify-content :flex-start;
+    gap: 15px;
+    width: 100%;
+    min-height: 320px;
+    margin-top:20px;
+    /*needs particular height and width to apply this one.*/
+    background-image: linear-gradient(
+        to bottom right,
+        rgb(39, 3, 70),
+        rgba(137, 21, 91, 0.449)
+    );
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+}
+.f-card img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    margin:20px;
+}
+
+
+/* -----------------------------------FAQs or FAQ accordion--------------------------------------- */
+.FAQs{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 5px auto;
+    margin-top: 40px; 
+}
+.accordion{
+    margin-top: 20px; 
+    /* grid-template-rows:repeat(7,minmax(70px,4fr)) ; not needed*/
+    display: grid;
+    gap: 8px;
+    /*Browser automatically does grid-template-columns: 1fr; grid-template-rows: auto; =>height: auto; each row get height auto and grow as much as content need.*/
+    /* row like structure is formed ,of elements inside grid container  */
+}
+.faq-item{
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+}
+.faqs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #454545;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+.faqs:hover{
+    opacity: 0.5;
+}
+.faqs-answer{
+    display: none;  /*hides the given container/block/div from the viewport*/
+    background:#454545;
+    padding:20px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    transition:opacity 0.3s ease;
+}
+/*---JS DOM styles (classList.toggle)---*/
+.faqs-answer.active{
+    display: block;/* shows or makes the element to block level element like div, span etc.*/
+    opacity: 0.7;
+}
+.span-rotate{
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+/* -----------------------------------Click to Action btn(portfolio)--------------------------------------- */
+.portfolio-btn{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 5px auto;
+    /* margin-bottom: 30px; */
+}
+.prtf-btn{
+    background-color: #E50914;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    height: 38px;
+    padding: 25px 30px;
+    font-size:large;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* --------------------------------footer------------------------------------------ */
+.footer-section{
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    margin-bottom: 100px;
+}
+.footerLinks{
+    display: flex;
+    gap: 150px;
+}
+.f-link{
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+
+/* ----------------------------------media query (reponsive design)---------------------------------------- */
+
+@media (max-width:1280px){
+    .feature-cont{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:960px){
+    .feature-cont{
+        grid-template-columns:1fr;
+    }
+}
+
+
+
+/* ------------------------------------Modal.js CSS=> -------------------------------------- */
+/*Modal card => this class is made for overlay card which is inside modal.js (overlay.innerhtml="..";) */
+.overlay{
+    position: fixed;/*fixed Positioned relative to viewport ,not move on scroll:-makes background window scrollble*/
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+
+}
+.modal-card{
+    width:700px;
+    min-height:500px;
+    padding: 10px;
+    background:rgba(40, 39, 39, 0.618);
+    border-radius:12px;
+    overflow:hidden;/* clips any content that extends past the boundaries of an element's box, completely hiding the extra content from view without providing scrollbars*/
+}
+.modal-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition: 0.3s ease;
+    border-radius: 8px;
+    transition:transform 0.3s ease ;
+}
+.modal-card img:hover{
+    transform: translateY(-4px);
+}
+.modal-content{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-card button{
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #F7F7F4;
+    color: #181818;
+}
+/*Modal done*/
